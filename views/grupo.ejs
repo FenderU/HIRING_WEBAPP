@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Hiring Group</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="session.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="crudEmpresas.js" defer></script>
+  <script src="contratacion.js" defer></script>
+  <script src="nomina.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Panel de Usuario Hiring Group</h1>
+    <p>Bienvenido, <span id="nombreUsuario"></span></p>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <div class="container">
+    <h2> Empresas Clientes (CRUD)</h2>
+    <form id="formEmpresa">
+      <input type="text" placeholder="Nombre de empresa" id="empresaNombre" required>
+      <input type="text" placeholder="Sector" id="empresaSector" required>
+      <input type="text" placeholder="Persona contacto" id="empresaContacto" required>
+      <input type="email" placeholder="Email login" id="empresaEmail" required>
+      <input type="text" placeholder="Password provisional" id="empresaPassword" required>
+      <button type="submit">Agregar Empresa</button>
+    </form>
+    <ul id="listaEmpresas"></ul>
+
+    <hr>
+
+    <h2>Contratación de Postulantes</h2>
+    <form id="formContratacion">
+        <select id="selectCandidato"></select>
+
+        <div id="infoCandidato"></div>
+
+        <input type="text" placeholder="Tiempo de contratación (ej. 6 meses)" id="tiempoContrato" required>
+        <input type="number" placeholder="Salario mensual" id="salarioMensual" required>
+        <input type="text" placeholder="Tipo de sangre" id="sangre" required>
+        <input type="text" placeholder="Contacto de emergencia" id="contactoEmergencia" required>
+        <input type="text" placeholder="Teléfono emergencia" id="telefonoEmergencia" required>
+        <input type="text" placeholder="Nro. de cuenta" id="cuenta" required>
+        <input type="text" placeholder="Banco" id="banco" required>
+
+        <button type="submit">Contratar</button>
+    </form>
+
+    <hr>
+
+    <h2> Preparar Nómina</h2>
+    <form id="formNomina">
+      <select id="empresaNomina"></select>
+      <input type="month" id="mesNomina">
+      <button type="submit">Generar Nómina</button>
+    </form>
+    <pre id="reporteNomina"></pre>
+
+    <hr>
+
+    <h2> Corrida de Nómina</h2>
+    <button onclick="correrNomina()">Ejecutar corrida</button>
+    <pre id="reporteCorrida"></pre>
+
+    <hr>
+
+    <h2> Bancos Registrados</h2>
+    <ul id="listaBancos"></ul>
+  </div>
+</body>
+</html>

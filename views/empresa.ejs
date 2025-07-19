@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Empresa</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="session.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="empresa.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Panel del Usuario Empresa</h1>
+    <p>Bienvenido al panel de gestión de ofertas</p>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <div class="container">
+    <h2> Crear / Editar Oferta</h2>
+    <form id="formOferta">
+      <input type="text" id="cargo" placeholder="Cargo Vacante" required>
+      <input type="text" id="descripcion" placeholder="Descripción del Cargo" required>
+      <input type="number" id="salario" placeholder="Salario ofrecido" required>
+      <input type="text" id="area" placeholder="Área (ej. Informática)" required>
+      <input type="text" id="estado" placeholder="Estado (ej. Bolívar)" required>
+      <input type="text" id="empresa" placeholder="Nombre de la Empresa" required>
+      <button type="submit">Guardar Oferta</button>
+    </form>
+
+    <h2> Ofertas en el Sistema</h2>
+    <ul id="listaOfertas"></ul>
+
+    <hr>
+
+    <h2> Cambiar Contraseña</h2>
+    <form id="formPassword">
+      <input type="password" id="nuevaClave" placeholder="Nueva contraseña" required>
+      <button type="submit">Actualizar Contraseña</button>
+    </form>
+  </div>
+</body>
+</html>

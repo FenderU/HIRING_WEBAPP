@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Postulante</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="session.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="postulante.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Panel de Usuario Postulante</h1>
+    <p>Bienvenido, <span id="nombreUsuario"></span></p>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <div class="container">
+    <h2> Registro de Perfil</h2>
+    <form id="perfilForm">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="text" id="profesion" placeholder="Profesión" required>
+      <input type="text" id="universidad" placeholder="Universidad de egreso" required>
+      <input type="text" id="estado" placeholder="Estado del país" required>
+      <button type="submit"> Guardar perfil</button>
+    </form>
+
+    <h3> Experiencia Laboral</h3>
+    <form id="experienciaForm">
+      <input type="text" id="empresa" placeholder="Empresa" required>
+      <input type="text" id="cargo" placeholder="Cargo ocupado" required>
+      <input type="date" id="inicio" required>
+      <input type="date" id="fin" required>
+      <button type="submit">Agregar experiencia</button>
+    </form>
+    <ul id="listaExperiencia"></ul>
+
+    <hr>
+
+    <h2> Buscar y Postular</h2>
+    <select id="areaFiltro"></select>
+    <input type="text" id="estadoFiltro" placeholder="Estado">
+    <button onclick="filtrarOfertas()">Filtrar</button>
+    <ul id="ofertasFiltradas"></ul>
+
+    <hr>
+
+    <h2> Mis Postulaciones</h2>
+    <ul id="misPostulaciones"></ul>
+  </div>
+</body>
+<script src="data.js"></script>
+<script src="postulante.js"></script>
+</html>

@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Login - Hiring Group</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenido a HIRING GROUP</h1>
+    <div class="login-container">
+        <h2>Hiring Group - Inicio de Sesión</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="login.js"></script>
 </body>
+<script src="users.js"></script> 
+<script src="login.js"></script> 
 </html>
